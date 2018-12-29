@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="de-DE">
+
+<head>
+<title>Teamplanbuch</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="css/master.css">
+<script type = "text/javascript" src="js/ChangeStatus.js"></script>
+<script type = "text/javascript" src="js/master.js"></script>
+<script type = "text/javascript" src="js/createtable.js"></script>
+<script type = "text/javascript" src="js/filterTable.js"></script>
+</head>
+
+<body>
+  <noscript>
+  Sorry...JavaScript is needed to go ahead.
+  </noscript>
+<!-- commenting out things in atom can be done with ctrl + shift + 7 -->
+  <img class="head" src="images/main/welle_cutoff.png" alt="divers-wave">
+
+  <h1>Trainingsanwesenheit</h1>
+  <hr>
+  <p>Trag in den folgenden Daten ein, an welchen <em>Tagen</em> du im Training bist.</p>
+  <p class = "special"> Damit die Trainer*innen gut für die kommenden Trainings voraus planen können, ist es wichtig, dass Du dich einträgst.</p>
+
+  <br>
+  <input type="text" id="myInput" onkeyup="filterTable()" placeholder="Filter Events..">
+  <br>
+  <button type="button" name="speichern!" onclick="storeData()"></button>
+  <br>
+
+  <script type="text/javascript">
+    tableCreate();
+  </script>
+
+  <script type="text/javascript">
+    document.write("<br>")
+    document.write(["Flo",1,0,0,0])
+    document.write("<br>")
+    //document.write(storeData())
+
+  </script>
+
+
+</body>
+</html>
