@@ -9,7 +9,7 @@ function generateID() {
 function loadFile(filePath) {
   var result = null;
   var xmlhttp = new XMLHttpRequest();
-  xmlhttp.open("GET", filePath, false);
+  xmlhttp.open("GET", filePath, true);
   xmlhttp.send();
   if (xmlhttp.status==200) {
     result = xmlhttp.responseText;
@@ -20,7 +20,7 @@ function loadFile(filePath) {
 
 function writeFile(myObject, filePath) {
   var xmlhttp = new XMLHttpRequest();
-  xmlhttp.open("POST", "data/member_attendance.txt",false);
+  xmlhttp.open("POST", "data/member_attendance.txt",true);
   xmlhttp.setRequestHeader("Content-Type", "application/");
   xmlhttp.send(myObject);
 }
